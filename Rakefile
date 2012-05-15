@@ -46,3 +46,4 @@ begin
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"
 end
+Jeweler::RubygemsDotOrgTasks.new
