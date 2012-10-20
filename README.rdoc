@@ -1,3 +1,21 @@
+= About this Fork
+
+This fork contains a patch provided by {james2m}[http://github.com/james2m] which will require RR's new RSpec-2 adapter automatically, meaning that RR should "just work" with RSpec-2.
+
+You can use it right now by adding this to your Gemfile:
+
+    gem 'mcmire-rr', '~> 1.0.5.rc1', :require => 'rr'
+
+Now add this to your spec_helper.rb:
+   
+    RSpec.configure do |c|
+      c.mock_with :rr 
+    end
+
+If you have any questions, feel free to {ping me}[mailto:elliot.winkler@gmail.com].
+
+---
+
 = RR
 
 RR (Double Ruby) is a test double framework that features a rich
