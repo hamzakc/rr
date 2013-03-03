@@ -31,9 +31,11 @@ module RR
       end
 
       def call_original_method
+       unless method_name.to_s === 'to_ary' and subject.class == NilClass
         Injections::DoubleInjection.find_or_create(subject_class, method_name).dispatch_method_delegates_to_dispatch_original_method do
           call_original_method_missing
         end
+       end
       end
 
       protected
